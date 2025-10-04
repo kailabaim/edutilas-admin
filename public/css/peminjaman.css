@@ -1,0 +1,103 @@
+/* ===== Styling khusus halaman Peminjaman ===== */
+
+/* Tabel dasar */
+.table {
+    border-collapse: collapse !important;
+    width: 100%;
+    background-color: #fff;
+}
+
+/* Header tabel */
+.table thead th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    border: 1px solid #dee2e6 !important;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Isi tabel */
+.table tbody td {
+    border: 1px solid #dee2e6 !important;
+    padding: 0.75rem;
+    vertical-align: middle;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+/* Hover effect */
+.table-hover tbody tr:hover {
+    background-color: #f1f5f9 !important;
+    transition: background 0.2s ease-in-out;
+}
+
+/* Kolom kode */
+.table tbody td:first-child {
+    font-weight: 600;
+    color: #4f46e5;
+    text-align: center;
+}
+
+/* Status */
+.table tbody td .badge {
+    padding: 0.45em 0.75em;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+}
+
+/* Tombol aksi */
+.table tbody td .btn {
+    border-radius: 6px;
+    padding: 0.25rem 0.5rem;
+    margin: 0 2px;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+}
+.table tbody td .btn:hover {
+    transform: translateY(-1px);
+}
+
+/* Pagination */
+.card-footer {
+    font-size: 0.85rem;
+}
+.card-footer .pagination .page-link {
+    border-radius: 6px;
+    margin: 0 2px;
+}
+/* ===== Styling Form Filter (bagian atas) ===== */
+.card .form-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #6c757d;
+    margin-bottom: 0.25rem;
+}
+
+.card .form-control,
+.card .form-select {
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    box-shadow: none;
+    border: 1px solid #dee2e6;
+}
+
+.card .form-control:focus,
+.card .form-select:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 0.2rem rgba(99, 102, 241, 0.15);
+}
+
+.card .btn {
+    border-radius: 0.5rem;
+    font-size: 0.85rem;
+    padding: 0.45rem 0.9rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.card .btn:hover {
+    transform: translateY(-1px);
+}
