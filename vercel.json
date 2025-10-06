@@ -14,7 +14,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "trus",
-        "APP_URL": "http://localhost:8000",
+        "APP_URL": "https://edutilas-admin.vercel.app/",
         "APP_KEY": "base64:BxAXOyjaW37/aAEXAS0RzSSw8/tutE3IBXKCm6BOgU4=",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
