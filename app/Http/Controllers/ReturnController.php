@@ -56,8 +56,7 @@ class ReturnController extends Controller
         // Pagination
          // Get all returns
         $returns = $query->orderBy('return_date', 'desc')->get();
-        $returns->appends($request->query());
-        
+
         return view('dashboard.peminjaman', compact('returns', 'monthlyStats'));
     }
     
