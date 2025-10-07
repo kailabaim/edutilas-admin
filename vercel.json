@@ -1,17 +1,16 @@
 {
-    "version": 2,
-    "framework": null,
-    "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.7.4" }
-    },
-    "routes": [
-        { "src": "/build/(.*)", "dest": "/public/build/" },
-        { "src": "/(.*)", "dest": "/api/index.php" }
-    ],
-    "public": true,
-    "buildCommand": "vite build",
-    "outputDirectory": "public",
- "env": {
+  "version": 2,
+  "builds": [
+    { "src": "public/index.php", "use": "@vercel/php" }
+  ],
+  "routes": [
+    { "src": "/build/(.*)", "dest": "/public/build/$1" },
+    { "src": "/api/(.*)", "dest": "/public/index.php" },
+    { "src": "/(.*)", "dest": "/public/index.php" }
+  ],
+  "buildCommand": "vite build",
+  "outputDirectory": "public",
+  "env": {
     "APP_ENV": "production",
     "APP_DEBUG": "true",
     "APP_URL": "https://edutilas-admin.vercel.app/",
@@ -32,6 +31,5 @@
     "DB_DATABASE": "railway",
     "DB_USERNAME": "root",
     "DB_PASSWORD": "KiCIJRLZdXjagGILSTxzfNDqNhSKTDCW"
-}
-
+  }
 }
