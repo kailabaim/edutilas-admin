@@ -53,9 +53,9 @@ class ReturnController extends Controller
         // Get monthly statistics
         $monthlyStats = $this->getMonthlyStatistics();
         
-        // Pagination
-         // Get all returns
-       $returns = $query->orderBy('return_date', 'desc')->paginate(10);
+        // Get all returns without pagination
+        $returns = $query->orderBy('return_date', 'desc')->get();
+        
         return view('dashboard.peminjaman', compact('returns', 'monthlyStats'));
     }
     
