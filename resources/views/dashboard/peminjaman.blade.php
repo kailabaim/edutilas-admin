@@ -278,9 +278,6 @@
     .py-4 { padding: 2rem 0; }
     .mb-2 { margin-bottom: 0.5rem; }
     .opacity-50 { opacity: 0.5; }
-    .card-footer { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; border-top: 1px solid #f1f5f9; background: #fafbfc; }
-    .pagination-info { font-size: 0.875rem; }
-    .pagination-links { display: flex; gap: 0.5rem; }
 </style>
 @endpush
 
@@ -459,7 +456,7 @@
 <!-- Data Pengembalian -->
 <div class="card">
     <div class="card-header">
-        <h3>Data Pengembalian Buku ({{ number_format($returns->total()) }} Data)</h3>
+        <h3>Data Pengembalian Buku ({{ number_format($returns->count()) }} Data)</h3>
     </div>
 
     <div class="transactions-scroll">
@@ -571,20 +568,6 @@
             </tbody>
         </table>
     </div>
-
-    @if($returns->hasPages())
-        <div class="card-footer">
-            <div class="pagination-info">
-                <span class="text-muted">
-                    Menampilkan {{ $returns->firstItem() ?? 0 }} - {{ $returns->lastItem() ?? 0 }}
-                    dari {{ $returns->total() ?? 0 }} data
-                </span>
-            </div>
-            <div class="pagination-links">
-                {{ $returns->links() }}
-            </div>
-        </div>
-    @endif
 </div>
 @endsection
 
